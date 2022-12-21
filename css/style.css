@@ -1,0 +1,206 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,
+label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,
+header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/*vertical-align: baseline;*/
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+	color: #EAE9E5;
+}
+
+.menu {
+	font-weight: normal;
+	font-size: 18px;
+	list-style: none;
+	width: 100%;
+	display: flex;
+	font-weight: bold;
+	justify-content: space-between;	
+	position: fixed;
+	height: auto;
+	top: 0;
+	z-index: 99999;
+	box-sizing: border-box;
+	/*делает все элементы блочными*/
+	background: transparent;
+	overflow: hidden;
+	padding-left: 40px;
+	background: #2A2539;
+	box-shadow: 0 0 5px #BDD3CC;
+}
+
+.menu a {
+	position: relative;
+	transition: .4s ease-in-out;
+	cursor: pointer;
+	height: 22px;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.menu .dropdown {
+	display: flex;
+	flex-direction: row;
+}
+
+.menu .icon {
+	display: none;
+	position: absolute;
+	right: 15px;
+	top: 20px;
+	background: none;
+	border: none;
+	outline: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu a:hover {
+	text-shadow: 0 0 10px #BDD3CC;
+}
+
+a {
+	text-decoration: none;
+}
+h1 {
+	font-size: 36pt;
+	font-weight: bold;
+	font-family: 'Gochi Hand', cursive;
+}
+.glow {
+	padding: 120px 0 120px 0;
+	max-width: 100%;
+	text-align: center;
+	background: #2A2539;
+	font-size: 14pt;
+}
+.left {
+	display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.right {
+	padding-left: 10px;
+}
+
+h2 {
+	font-size: 28pt;
+}
+
+.begin, .cafe, .gallery, .park, .teatr, .end {
+	padding: 0 60px;
+	padding-top: 40px;
+	background: #2A2539;
+}
+
+.begin, .end {
+	font-weight: bold;
+	font-size: 22pt;
+	display: flex;
+  align-items: center;
+}
+
+.lokation {
+	background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cards {
+	max-width: 100%;
+	margin: auto;
+  	padding-top: 20px;
+	display: flex;
+  	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.card { 
+	max-width: 100%;
+	background: rgba(189, 211, 204, 0.2);
+	border-radius: 8px;
+  border-right: 10px solid #BDD3CC;
+  margin: 0 10% 16px 5%;
+  /*padding: 0 10px 0 0;*/
+  display: flex;
+  flex-flow: column;
+	box-shadow: 3px 3px 10px #BDD3CC;
+}
+.card-title {
+	font-weight: bold;
+  padding: 18px;
+  font-size: 16pt;
+  display: flex;
+  align-items: center;
+}
+.card-prices {
+  font-size: 14pt;
+  display: flex;
+  font-weight: 500;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  margin-top: auto;
+}
+.price-left {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.price-org {
+  padding: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+img {
+	border-radius: 10px;
+	max-width: 200px;
+}
+
+
+.end {
+	padding-bottom: 40px;
+}
+
+
+@media screen and (max-width: 600px) {
+	.menu {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.menu.responsive {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.menu .icon {
+		display: block;
+	}
+	.menu .dropdown {
+		display: none;
+		flex-direction: column;
+	}
+	.menu.responsive .dropdown {
+		display: flex;
+	}
+}
